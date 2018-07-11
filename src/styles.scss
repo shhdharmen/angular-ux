@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap';
+@import '~@angular/material/theming';
+
+// always include only once per project
+@include mat-core();
+// import our custom theme
+@import 'my-theme';
+// specify theme class eg: <body class="my-theme"> ... </body>
+.my-theme {
+    // use our theme with angular-material-theme mixin
+    @include angular-material-theme($my-theme);
+}
